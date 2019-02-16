@@ -12,28 +12,21 @@ namespace PadawansTask5
             }
             else
             {
-                if ( source.Length % 2 != 0)
+                int count = 0;
+                for (int i = 0; i < source.Length / 2; i++)
                 {
-                    return "No";
+                    if (source[i] == source[source.Length - 1 - i])
+                    {
+                        count++;
+                    }
+                }
+                if (count == source.Length / 2)
+                {
+                    return "Yes";
                 }
                 else
                 {
-                    int count = 0;
-                    for ( int i = 0; i < source.Length /2; i++)
-                    {
-                        if ( source[i] == source[ source.Length - 1 - i])
-                        {
-                            count++;
-                        }
-                    }
-                    if (count == source.Length / 2)
-                    {
-                        return "Yes";
-                    }
-                    else
-                    {
-                        return "No";
-                    }
+                    return "No";
                 }
             }
         }
