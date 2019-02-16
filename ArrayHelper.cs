@@ -17,14 +17,14 @@ namespace PadawansTask5
             else
             {
                 int count = 0;
-                for (int i = 0; i < source.Length / 2; i++)
+                for (int i = 0; i < (int)source.Length / 2; i++)
                 {
                     if (source[i] == source[source.Length - 1 - i])
                     {
                         count++;
                     }
                 }
-                if (count == source.Length / 2)
+                if (count == (int)source.Length / 2)
                 {
                     return "Yes";
                 }
